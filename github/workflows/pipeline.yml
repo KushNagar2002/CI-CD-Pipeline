@@ -1,0 +1,29 @@
+name: My First Pipeline
+
+on:
+  push:
+
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run application
+        run: python hello.py
+
+      - name: Create artifact file
+        run: echo "pipeline successful" > output.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-output
+          path: output.txt
