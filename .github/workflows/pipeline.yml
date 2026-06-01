@@ -19,6 +19,9 @@ jobs:
       - name: Run application
         run: python hello.py
 
+      - name: Run tests
+        run: python test_math.py
+
       - name: Create artifact file
         run: echo "pipeline successful" > output.txt
 
