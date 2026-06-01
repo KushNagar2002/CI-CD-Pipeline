@@ -17,7 +17,7 @@ jobs:
           python-version: '3.11'
 
       - name: Run application
-        run: python hello.py
+        run: python helloo.py
 
       - name: Create artifact file
         run: echo "pipeline successful" > output.txt
