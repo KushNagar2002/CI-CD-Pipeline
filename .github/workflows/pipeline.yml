@@ -30,3 +30,148 @@ jobs:
         with:
           name: pipeline-output
           path: output.txt
+
+# ------------------------------------------
+
+# name: CI Pipeline
+
+# on:
+#   push:
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       - name: Setup python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+      
+#       - name: Run Application
+#         run: python hello.py
+      
+#   test:
+#     needs: build
+#     runs-on: ubuntu-latest
+
+#     steps:
+#         uses: actions/checkout@v4
+      
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+      
+#       - name: Checkout Repository
+#       - name: Run Test
+#         run: python test_math.py
+
+# ------------------------------------------
+
+# name: CI pipeline 2
+
+# on:
+#   push:
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+      
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with: 
+#           python-version: '3.11'
+      
+#       - name: Run Application
+#         run: python hello.py
+    
+#   test:
+#     needs: build
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+      
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+        
+#       - name: Run Test
+#         run: python test_math.py
+
+#   artifact:
+#     needs: test
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Create Artifact file
+#         run: echo "pipeline successful" > output.txt
+
+#       - name: Upload Artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: pipeline-output
+#           path: output.txt
+
+# ------------------------------------------
+
+# name: CI Pipeline 3
+
+# on:
+#   push:
+#   pull_request:
+
+# jobs:
+#   lint:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+      
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+      
+#       - name: Run Application
+#         run: python hello.py
+      
+#   test:
+#     needs: lint
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+#       - name: Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+#       - name: Run Application
+#         run: python test_math.py
+  
+#   package: 
+#     needs: test
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Create Build.txt
+#         run: echo "pipeline successful" > build.txt
+
+#       - name: Upload Artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: build-output
+#           path: build.txt
+
